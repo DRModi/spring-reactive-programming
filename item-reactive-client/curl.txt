@@ -1,0 +1,26 @@
+GET all Items:
+--------------
+curl http://localhost:8081/client/exchange
+curl http://localhost:8081/client/retrieve
+
+
+GET an Item by id:
+------------------
+curl http://localhost:8081/client/exchange/111
+curl http://localhost:8081/client/retrieve/111
+
+
+POST an Item:
+-------------
+curl -d '{"id": null, "description": "Google Nest Wifi Bundle", "price": 499.99}' -H "Content-Type: application/json" -X POST http://localhost:8081/client/addItem
+
+
+PUT an Item:
+-------------
+curl -d '{"id": "111", "description": "Apple Airpord 2", "price": 299.99}' -H "Content-Type: application/json" -X PUT http://localhost:8081/client/updateItem
+
+
+
+Delete an Item:
+-------------
+curl -X DELETE  http://localhost:8081/client/deleteItem/111
